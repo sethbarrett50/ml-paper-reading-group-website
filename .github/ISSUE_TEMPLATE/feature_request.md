@@ -1,16 +1,19 @@
 ---
 name: Feature request
 about: Suggest an enhancement
-title: "[feat] "
+title: '[feat] '
 labels: enhancement
-assignees: ""
+assignees: ''
 ---
 
 ## What should we add/change?
+
 -
 
 ## Why is it useful?
+
 -
 
 ## Proposed implementation (optional)
+
 -

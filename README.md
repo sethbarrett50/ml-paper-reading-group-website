@@ -25,11 +25,13 @@ The site is intentionally “data-driven”: most updates (papers, schedule, lea
 ## Where to edit content
 
 ### Papers
+
 **File:** `src/lib/data/papers.ts`
 
 Add/edit entries in `PAPERS`. This is the master list of all papers the group tracks.
 
 Each paper includes fields like:
+
 - `title`
 - `link` (optional)
 - `authors`
@@ -38,6 +40,7 @@ Each paper includes fields like:
 - `proposer`
 
 ### Schedule
+
 **File:** `src/lib/data/schedule.ts`
 
 Edit `SCHEDULE` to add new meetings, update dates, fill in leaders, or set paper titles.
@@ -45,9 +48,11 @@ Edit `SCHEDULE` to add new meetings, update dates, fill in leaders, or set paper
 **Important:** The “reviewed” marker for papers is computed by matching meeting `paperTitle` values to `papers.ts` titles (with normalization). If you rename a paper title in either place, keep them roughly consistent.
 
 ### Reviewed marker + ordering logic
+
 **File:** `src/lib/data/review.ts`
 
 This file:
+
 - matches schedule entries to papers
 - sets `reviewed: true/false`
 - attaches `reviewDate`, `term`, `meetingLabel`, `discussionLeaders`
@@ -56,6 +61,7 @@ This file:
 If the matching ever fails because a schedule title differs too much from the paper title, adjust the normalization in `review.ts`.
 
 ### Leadership
+
 **File:** `src/lib/data/leadership.json`
 
 Update names/roles/links here. This drives `/leadership`.
@@ -65,6 +71,7 @@ Update names/roles/links here. This drives `/leadership`.
 ## Where to edit the UI
 
 ### Routes (pages)
+
 **Directory:** `src/routes/`
 
 - `src/routes/+page.svelte` → Home
@@ -75,16 +82,19 @@ Update names/roles/links here. This drives `/leadership`.
 - `src/routes/+layout.ts` → prerender/trailingSlash settings
 
 ### Shared components
+
 **Directory:** `src/lib/components/`
 
 - `Nav.svelte` → site navigation header
 
 ### Styling
+
 - `src/app.css` → global theme (dark styling, layout utility classes)
 
 ---
 
 ## Static assets (logo, favicon, robots)
+
 **Directory:** `static/`
 
 - `static/logo.png` → group logo (referenced by nav/home)
@@ -97,6 +107,7 @@ Anything in `static/` is copied directly into the built site root.
 ## Local development
 
 ### Install
+
 ```bash
 make install
 ```
@@ -151,14 +162,14 @@ Run `make` or `make help` to see all targets.
 
 Common ones:
 
-* `make install` – install dependencies (`npm ci`)
-* `make dev` – run dev server
-* `make build` – build static site
-* `make check` – svelte-check/typecheck
-* `make lint` – eslint + prettier check
-* `make format` – prettier write
-* `make overview` – prints tree + routes + config snapshots
-* `make search PATTERN="..."` – grep through `src/`
+- `make install` – install dependencies (`npm ci`)
+- `make dev` – run dev server
+- `make build` – build static site
+- `make check` – svelte-check/typecheck
+- `make lint` – eslint + prettier check
+- `make format` – prettier write
+- `make overview` – prints tree + routes + config snapshots
+- `make search PATTERN="..."` – grep through `src/`
 
 ---
 
@@ -166,8 +177,8 @@ Common ones:
 
 Deployment happens via GitHub Actions workflows in `.github/workflows/`:
 
-* `ci.yml` runs `format/check/lint/build` for PRs and pushes.
-* `deploy.yml` deploys to GitHub Pages **only after CI succeeds on `main`**.
+- `ci.yml` runs `format/check/lint/build` for PRs and pushes.
+- `deploy.yml` deploys to GitHub Pages **only after CI succeeds on `main`**.
 
 ### GitHub repo configuration
 
@@ -183,12 +194,12 @@ After merging to `main`, the site will be available at:
 
 ## Repo layout (quick map)
 
-* `.github/workflows/` – CI + Pages deploy
-* `src/lib/data/` – content source of truth (papers, schedule, leadership)
-* `src/routes/` – pages
-* `src/app.css` – global styling/theme
-* `static/` – logo/favicon/robots and other static files
-* `Makefile` – common commands
+- `.github/workflows/` – CI + Pages deploy
+- `src/lib/data/` – content source of truth (papers, schedule, leadership)
+- `src/routes/` – pages
+- `src/app.css` – global styling/theme
+- `static/` – logo/favicon/robots and other static files
+- `Makefile` – common commands
 
 ---
 
