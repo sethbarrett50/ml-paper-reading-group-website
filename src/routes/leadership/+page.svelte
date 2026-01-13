@@ -1,30 +1,67 @@
 <script lang="ts">
-	const universityPresenceUrl =
-		'https://augusta.presence.io/organization/ai-ml-paper-reading-group';
+	import leadership from '$lib/data/leadership.json';
+
+	type Link = { label: string; url: string };
+	type Member = {
+		name: string;
+		role: string;
+		affiliation?: string;
+		email?: string;
+		links?: Link[];
+	};
+
+	const members = leadership as Member[];
+
+	const roleOrder: Record<string, number> = {
+		President: 1,
+		'Vice President': 2,
+		Secretary: 3,
+		Treasurer: 4,
+		'Public Relations': 5,
+		'Co-Advisor': 10
+	};
+
+	members.sort((a, b) => {
+		const ao = roleOrder[a.role] ?? 99;
+		const bo = roleOrder[b.role] ?? 99;
+		if (ao !== bo) return ao - bo;
+		return a.name.localeCompare(b.name);
+	});
 </script>
 
-<h1 style="margin: 0 0 14px;">About</h1>
+<h1 style="margin: 0 0 14px;">Leadership</h1>
 
-<section class="card" style="padding: 16px;">
-	<h2 style="margin: 0 0 8px; font-size: 1.15rem;">Mission</h2>
-	<p style="margin:0; color:var(--muted); max-width: 80ch;">
-		We read and discuss machine learning papers to build shared understanding and accelerate
-		research. Sessions focus on key ideas, assumptions, results, and practical takeaways.
-	</p>
-
-	<hr style="border:0; border-top:1px solid var(--border); margin: 14px 0;" />
-
-	<h2 style="margin: 0 0 8px; font-size: 1.15rem;">How meetings work</h2>
-	<ul style="margin: 0; padding-left: 18px; color: var(--muted);">
-		<li>One discussion leader presents a short overview (10–15 minutes).</li>
-		<li>Group discussion: what’s strong/weak, what to reproduce, and open questions.</li>
-		<li>We update the papers list and schedule as we go.</li>
-	</ul>
-
-	<hr style="border:0; border-top:1px solid var(--border); margin: 14px 0;" />
-
-	<h2 style="margin: 0 0 8px; font-size: 1.15rem;">University presence</h2>
-	<p style="margin:0; color:var(--muted);">
-		<a class="btn" href={universityPresenceUrl} target="_blank" rel="noreferrer">Open</a>
+<section class="card" style="padding: 16px; margin-bottom: 14px;">
+	<p style="margin:0; color:var(--muted); max-width: 90ch;">
+		The ML Paper Reading Group leadership team coordinates meeting logistics, schedules presenters,
+		and maintains the paper list. Reach out if you’d like to present or suggest a paper.
 	</p>
 </section>
+
+<div class="grid cols-3">
+	{#each members as m (m.email ?? m.name)}
+		<section class="card" style="padding: 16px;">
+			<div class="pill">{m.role}</div>
+
+			<h2 style="margin: 10px 0 4px; font-size: 1.15rem; letter-spacing: -0.01em;">
+				{m.name}
+			</h2>
+
+			{#if m.affiliation}
+				<p style="margin: 0 0 10px; color: var(--muted);">{m.affiliation}</p>
+			{/if}
+
+			<div style="display:flex; gap:10px; flex-wrap:wrap;">
+				{#if m.email}
+					<a class="btn" href={`mailto:${m.email}`}>Email</a>
+				{/if}
+
+				{#if m.links}
+					{#each m.links as l (l.url)}
+						<a class="btn" href={l.url} target="_blank" rel="noreferrer">{l.label}</a>
+					{/each}
+				{/if}
+			</div>
+		</section>
+	{/each}
+</div>
