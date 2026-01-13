@@ -11,41 +11,37 @@
 		"role": "Vice President",
 		"affiliation": "Augusta University",
 		"email": "mdhassan@augusta.edu",
-		"links": [{ "label": "GitHub", "url": "https://github.com/sethbarrett50" }]
+		"links": [{ "label": "GitHub", "url": "https://github.com/mahady-hassan" }]
 	},
 	{
 		"name": "Rita Adhikari",
 		"role": "Secretary",
 		"affiliation": "Augusta University",
-		"email": "riadhikari@augusta.edu",
-		"links": [{ "label": "GitHub", "url": "https://github.com/sethbarrett50" }]
+		"email": "riadhikari@augusta.edu"
 	},
 	{
 		"name": "Alireza Taheritajar",
 		"role": "Treasurer",
 		"affiliation": "Augusta University",
-		"email": "ataheritajar@augusta.edu",
-		"links": [{ "label": "GitHub", "url": "https://github.com/sethbarrett50" }]
+		"email": "ataheritajar@augusta.edu"
 	},
 	{
 		"name": "Bojun Zhang",
 		"role": "Public Relations",
 		"affiliation": "Augusta University",
-		"email": "bojzhang@augusta.edu",
-		"links": [{ "label": "GitHub", "url": "https://github.com/sethbarrett50" }]
+		"email": "bojzhang@augusta.edu"
 	},
 	{
 		"name": "Lin Li, PhD",
 		"role": "Co-Advisor",
 		"affiliation": "Augusta University",
 		"email": "lli1@augusta.edu",
-		"links": [{ "label": "GitHub", "url": "https://github.com/sethbarrett50" }]
+		"links": [{ "label": "GitHub", "url": "https://github.com/linli786" }]
 	},
 	{
 		"name": "Shiwei Zeng",
 		"role": "Co-Advisor",
 		"affiliation": "Augusta University",
-		"email": "szeng@augusta.edu",
-		"links": [{ "label": "GitHub", "url": "https://github.com/sethbarrett50" }]
+		"email": "szeng@augusta.edu"
 	}
 ]
