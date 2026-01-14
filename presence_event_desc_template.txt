@@ -1,4 +1,4 @@
 <p>Meeting `X` of the ML Paper Reading group. We will be reviewing `X` presented by ``. Please ensure you have read the paper prior to attending to ensure thoughtful discussion</p>
-<p></p>
-<p>For most up to date regarding events, please visit <a href="https://sethbarrett50.github.io/ml-paper-reading-group-website/schedule/" target="">here</a></p>
-<p></p>
+<p><br></p>
+<h4>For most up to date regarding events, please visit <a href="https://sethbarrett50.github.io/ml-paper-reading-group-website/schedule/" target="">here</a></h4>
+<p><br></p>
