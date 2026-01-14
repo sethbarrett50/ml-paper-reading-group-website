@@ -3,8 +3,13 @@
 
 	const now = new Date();
 
+	function parseISODateLocal(iso: string): Date {
+		const [y, m, d] = iso.split('-').map(Number);
+		return new Date(y, m - 1, d);
+	}
+
 	function fmtDate(iso: string): string {
-		return new Date(iso).toLocaleDateString(undefined, {
+		return parseISODateLocal(iso).toLocaleDateString(undefined, {
 			year: 'numeric',
 			month: 'short',
 			day: 'numeric'
@@ -12,7 +17,8 @@
 	}
 
 	function isPast(iso: string): boolean {
-		const d = new Date(iso + 'T23:59:59');
+		const d = parseISODateLocal(iso);
+		d.setHours(23, 59, 59, 999);
 		return d.getTime() < now.getTime();
 	}
 
@@ -42,15 +48,26 @@
 						<div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
 							<span class="pill">{m.meetingLabel}</span>
 							<span class="pill">{fmtDate(m.date)}</span>
+
+							{#if m.time?.trim()}
+								<span class="pill">{m.time}</span>
+							{/if}
+
+							{#if m.location?.trim()}
+								<span class="pill">{m.location}</span>
+							{/if}
+
 							{#if isPast(m.date)}
 								<span
 									class="pill"
 									style="border-color: rgba(34,197,94,0.45); background: rgba(34,197,94,0.12);"
-									>Completed</span
 								>
+									Completed
+								</span>
 							{:else}
 								<span class="pill">Upcoming</span>
 							{/if}
+
 							{#if m.leaders?.trim()}
 								<span class="pill">Leader(s): {m.leaders}</span>
 							{/if}
