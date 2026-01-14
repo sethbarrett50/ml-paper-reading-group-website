@@ -23,9 +23,9 @@
 			</h1>
 
 			<p style="margin: 0; color: var(--muted); font-size: 1.05rem; max-width: 75ch;">
-				We meet regularly to read and discuss influential ML papers—foundations, modern LLMs,
-				theory, and applied work. The goal is practical understanding: what the paper does, why it
-				works, and what we can build from it.
+				We meet regularly to read and discuss influential ML papers including foundations, modern
+				LLMs, theory, and applied work. The goal is practical understanding: what the paper does,
+				why it works, and what we can build from it.
 			</p>
 		</div>
 	</div>
