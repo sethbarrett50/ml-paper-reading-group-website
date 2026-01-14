@@ -37,7 +37,7 @@ export const SCHEDULE: Meeting[] = [
 		paperTitle: 'On the Power of Context-Enhanced Learning in LLMs',
 		leaders: 'Sharmen S'
 	},
-	{ term: 'Fall 2025', meetingLabel: 'Meeting 6', date: '2025-12-01', paperTitle: '', leaders: '' },
+	// { term: 'Fall 2025', meetingLabel: 'Meeting 6', date: '2025-12-01', paperTitle: '', leaders: '' },
 
 	// Spring 2026
 	{
