@@ -93,7 +93,7 @@ export const SCHEDULE: Meeting[] = [
 		term: 'Spring 2026',
 		meetingLabel: 'Meeting 4',
 		date: '2026-03-02',
-		paperTitle: '',
+		paperTitle: 'Recursive LLM Paper TBD',
 		leaders: 'Seth',
 		time: SPRING_TIME,
 		location: HYBRID_LOCATION
@@ -111,8 +111,8 @@ export const SCHEDULE: Meeting[] = [
 		term: 'Spring 2026',
 		meetingLabel: 'Meeting 6',
 		date: '2026-03-30',
-		paperTitle: '',
-		leaders: '',
+		paperTitle: 'Paper on Multimodal LLM, detailed paper will be updated later',
+		leaders: 'Dr. Lin Li',
 		time: SPRING_TIME,
 		location: HYBRID_LOCATION
 	},
@@ -120,8 +120,17 @@ export const SCHEDULE: Meeting[] = [
 		term: 'Spring 2026',
 		meetingLabel: 'Meeting 7',
 		date: '2026-04-13',
-		paperTitle: '',
+		paperTitle: 'TBD',
 		leaders: 'Salil',
+		time: SPRING_TIME,
+		location: HYBRID_LOCATION
+	},
+    {
+		term: 'Spring 2026',
+		meetingLabel: 'Meeting 7',
+		date: '2026-04-27',
+		paperTitle: 'TBD',
+		leaders: 'TBD',
 		time: SPRING_TIME,
 		location: HYBRID_LOCATION
 	}
