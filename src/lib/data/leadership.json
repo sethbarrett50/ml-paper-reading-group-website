@@ -26,10 +26,12 @@
 		"email": "ataheritajar@augusta.edu"
 	},
 	{
-		"name": "Bojun Zhang",
+		"name": "Salil Verma",
 		"role": "Public Relations",
 		"affiliation": "Augusta University",
-		"email": "bojzhang@augusta.edu"
+		"email": "salverma@augusta.edu",
+		"links": [{ "label": "GitHub", "url": "https://github.com/Salil5911" }]
+
 	},
 	{
 		"name": "Lin Li, PhD",
