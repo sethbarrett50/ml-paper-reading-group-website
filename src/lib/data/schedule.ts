@@ -125,7 +125,7 @@ export const SCHEDULE: Meeting[] = [
 		time: SPRING_TIME,
 		location: HYBRID_LOCATION
 	},
-    {
+	{
 		term: 'Spring 2026',
 		meetingLabel: 'Meeting 7',
 		date: '2026-04-27',
