@@ -1,0 +1,43 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "make",
+			"type": "shell",
+			"command": "zsh",
+			"args": ["-lc", "make format && make lint && make check && make build; ; exec zsh -l"],
+			"options": {
+				"env": {
+					"PATH": "/Users/SEBARRETT/.nvm/versions/node/v24.11.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+				}
+			},
+			"presentation": {
+				"panel": "dedicated",
+				"reveal": "always",
+				"focus": false,
+				"close": false
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "git",
+			"type": "shell",
+			"command": "zsh",
+			"args": ["-lc", "git branch; exec zsh -l"],
+			"presentation": {
+				"panel": "dedicated",
+				"reveal": "always",
+				"focus": false,
+				"close": false
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "bootstrap: open terminals",
+			"dependsOrder": "parallel",
+			"dependsOn": ["make", "git"],
+			"runOptions": { "runOn": "folderOpen" },
+			"problemMatcher": []
+		}
+	]
+}
