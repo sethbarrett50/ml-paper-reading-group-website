@@ -30,7 +30,7 @@
 		"svelte": "5.55.3",
 		"typescript-eslint": "8.58.0",
 		"typescript": "^5.9.3",
-		"vite": "7.3.2",
+		"vite": "8.0.9",
 		"knip": "6.4.1"
 	}
 }
