@@ -28,7 +28,7 @@
 		"prettier": "3.8.2",
 		"svelte-check": "4.4.8",
 		"svelte": "5.55.5",
-		"typescript-eslint": "8.59.2",
+		"typescript-eslint": "8.59.3",
 		"typescript": "6.0.3",
 		"vite": "7.3.2",
 		"knip": "6.11.0"
