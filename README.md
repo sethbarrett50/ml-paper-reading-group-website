@@ -2,7 +2,7 @@
 
 Static website for the **ML Paper Reading Group** (Augusta University), built with **Svelte 5 + SvelteKit** and deployed to **GitHub Pages** via **GitHub Actions**.
 
-URL: https://sethbarrett50.github.io/ml-paper-reading-group-website/
+URL: https://sethbarrett50.github.io/mlprg-website/
 
 ---
 
