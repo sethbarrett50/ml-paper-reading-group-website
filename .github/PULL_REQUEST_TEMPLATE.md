@@ -1,13 +1,16 @@
 ## Summary
+
 -
 
 ## Changes
+
 - [ ] Content update (papers/schedule/leadership)
 - [ ] UI update (routes/components/styles)
 - [ ] CI/Deploy update (workflows)
 - [ ] Dependencies
 
 ## Checklist
+
 - [ ] `make lint`
 - [ ] `make check`
 - [ ] `make build`
