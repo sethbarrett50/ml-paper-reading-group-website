@@ -19,5 +19,3 @@
 - [ ] Updated data in `src/lib/data/` if applicable
 
 ## Screenshots (optional)
-
--
