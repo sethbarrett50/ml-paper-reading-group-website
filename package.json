@@ -24,7 +24,7 @@
 		"eslint-plugin-svelte": "3.17.1",
 		"eslint": "10.2.1",
 		"globals": "17.5.0",
-		"prettier-plugin-svelte": "3.5.2",
+		"prettier-plugin-svelte": "4.0.1",
 		"prettier": "3.8.3",
 		"svelte-check": "4.4.8",
 		"svelte": "5.55.8",
